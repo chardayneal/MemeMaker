@@ -56,6 +56,9 @@
 		1CD916942B4A49BC006AB2C5 /* MemeMaker */ = {
 			isa = PBXGroup;
 			children = (
+				1CD916AB2B4A49F4006AB2C5 /* Controllers */,
+				1CD916AA2B4A49EE006AB2C5 /* Views */,
+				1CD916A92B4A49E8006AB2C5 /* Models */,
 				1CD916952B4A49BC006AB2C5 /* AppDelegate.swift */,
 				1CD916972B4A49BC006AB2C5 /* SceneDelegate.swift */,
 				1CD916992B4A49BC006AB2C5 /* ViewController.swift */,
@@ -65,6 +68,27 @@
 				1CD916A32B4A49BE006AB2C5 /* Info.plist */,
 			);
 			path = MemeMaker;
+			sourceTree = "<group>";
+		};
+		1CD916A92B4A49E8006AB2C5 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		1CD916AA2B4A49EE006AB2C5 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		1CD916AB2B4A49F4006AB2C5 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Controllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

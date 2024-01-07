@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -9,16 +10,95 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="MemeMaker" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="6TX-Nl-Ukc">
+                                <rect key="frame" x="45" y="608.66666666666663" width="303" height="51"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="jcW-1V-dYz"/>
+                                </constraints>
+                                <segments>
+                                    <segment title="🤔"/>
+                                    <segment title="😈"/>
+                                    <segment title="🤝"/>
+                                    <segment title="🛑"/>
+                                    <segment title="🙄"/>
+                                    <segment title="🤫"/>
+                                    <segment title="🔮"/>
+                                    <segment title="👺"/>
+                                </segments>
+                                <connections>
+                                    <action selector="segmentedControlPressed:" destination="BYZ-38-t0r" eventType="valueChanged" id="PxD-IE-li2"/>
+                                </connections>
+                            </segmentedControl>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="issaInsecure" translatesAutoresizingMaskIntoConstraints="NO" id="TT5-hW-bJd">
+                                <rect key="frame" x="45" y="270.66666666666669" width="303" height="311.00000000000006"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="303" id="EEY-MY-wbl"/>
+                                    <constraint firstAttribute="height" constant="311" id="iQ8-Dz-Skd"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="18" translatesAutoresizingMaskIntoConstraints="NO" id="8Fc-RD-DTd">
+                                <rect key="frame" x="45" y="518.66666666666663" width="303" height="43"/>
+                                <fontDescription key="fontDescription" name="AvenirNextCondensed-Heavy" family="Avenir Next Condensed" pointSize="30"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                                <color key="shadowColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <size key="shadowOffset" width="3" height="2"/>
+                            </label>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="bar" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="NUl-Tg-v74">
+                                <rect key="frame" x="45" y="219.66666666666666" width="303" height="32"/>
+                                <segments>
+                                    <segment title="Image 1"/>
+                                    <segment title="Image 2"/>
+                                    <segment title="Image 3"/>
+                                    <segment title="Image 4"/>
+                                </segments>
+                                <connections>
+                                    <action selector="segmentedControlPressed:" destination="BYZ-38-t0r" eventType="valueChanged" id="BIo-Fo-K7w"/>
+                                </connections>
+                            </segmentedControl>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Meme Maker" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mdu-4Z-buu">
+                                <rect key="frame" x="63" y="92" width="267.33333333333331" height="54"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="45"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" red="0.97254901959999995" green="0.98039215690000003" blue="0.8980392157" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="6TX-Nl-Ukc" firstAttribute="top" secondItem="TT5-hW-bJd" secondAttribute="bottom" constant="27.329999999999998" id="8Ue-dl-xcC"/>
+                            <constraint firstItem="Mdu-4Z-buu" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="9Oa-BP-A21"/>
+                            <constraint firstItem="8Fc-RD-DTd" firstAttribute="leading" secondItem="TT5-hW-bJd" secondAttribute="leading" id="HYi-Hl-fWq"/>
+                            <constraint firstItem="8Fc-RD-DTd" firstAttribute="bottom" secondItem="TT5-hW-bJd" secondAttribute="bottom" constant="-20" id="JEQ-Zu-Cie"/>
+                            <constraint firstItem="8Fc-RD-DTd" firstAttribute="trailing" secondItem="TT5-hW-bJd" secondAttribute="trailing" id="MhN-CE-jWm"/>
+                            <constraint firstItem="6TX-Nl-Ukc" firstAttribute="leading" secondItem="TT5-hW-bJd" secondAttribute="leading" id="ZEW-bx-IuW"/>
+                            <constraint firstItem="TT5-hW-bJd" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="cCw-rm-JfU"/>
+                            <constraint firstItem="NUl-Tg-v74" firstAttribute="trailing" secondItem="TT5-hW-bJd" secondAttribute="trailing" id="e8Z-6T-UEk"/>
+                            <constraint firstItem="6TX-Nl-Ukc" firstAttribute="trailing" secondItem="TT5-hW-bJd" secondAttribute="trailing" id="jjz-t5-lig"/>
+                            <constraint firstItem="NUl-Tg-v74" firstAttribute="leading" secondItem="TT5-hW-bJd" secondAttribute="leading" id="knL-gG-Q1G"/>
+                            <constraint firstItem="TT5-hW-bJd" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="lV7-VI-yV0"/>
+                            <constraint firstItem="Mdu-4Z-buu" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="33" id="mww-Nu-8Ca"/>
+                            <constraint firstItem="TT5-hW-bJd" firstAttribute="top" secondItem="NUl-Tg-v74" secondAttribute="bottom" constant="19.670000000000002" id="veJ-ts-Dj6"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="captionLabel" destination="8Fc-RD-DTd" id="V8O-rQ-pto"/>
+                        <outlet property="emojiSegmentedControl" destination="6TX-Nl-Ukc" id="JAV-oY-bwe"/>
+                        <outlet property="imageSegmentedControl" destination="NUl-Tg-v74" id="4i7-SW-fZg"/>
+                        <outlet property="imageView" destination="TT5-hW-bJd" id="GUP-8S-Vv9"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="84.732824427480907" y="4.9295774647887329"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="issaInsecure" width="640" height="426.66665649414062"/>
+    </resources>
 </document>
