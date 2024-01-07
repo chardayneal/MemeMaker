@@ -37,6 +37,12 @@ class ViewController: UIViewController {
         }
     }
     
+    @IBAction func dragLabel(_ sender: UIPanGestureRecognizer) {
+        if sender.state == .changed {
+            captionLabel.center = sender.location(in: view)
+        }
+    }
+    
     func changeImageView(_ index: Int) {
         //depending on which segmented control option is selected, the respective image will be displayed in the imageView
 
